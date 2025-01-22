@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import '@/assets/styles/globals.css';
+import { COMPANY_DESCRIPTION, COMPANY_NAME, SERVER_URL } from "@/lib/constants";
+import { ThemeProvider } from "next-themes";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -8,8 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "UrbanThreads",
-  description: "Modern street wear from the",
+  title: COMPANY_NAME,
+  description: COMPANY_DESCRIPTION,
+  metadataBase: new URL(SERVER_URL)
 };
 
 export default function RootLayout({
@@ -18,11 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.className} antialiased`}
       >
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
