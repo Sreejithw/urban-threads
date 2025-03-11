@@ -24,7 +24,7 @@ const UserBadge = async() => {
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <div className="flex items-center">
-                    <Button variant='ghost' className="relative w-8 h-8 rounded-full ml-2 flex items-center justify-center bg-gray-200">
+                    <Button variant='ghost' className="relative w-8 h-8 rounded-full ml-2 flex items-center justify-center border border-gray-200">
                         { userBadgeName }
                     </Button>
                 </div>
@@ -40,6 +40,25 @@ const UserBadge = async() => {
                         </div>
                     </div>
                 </DropdownMenuLabel>
+                <DropdownMenuItem>
+                    <Link className="w-full" href="/user/profile">
+                        User Profile
+                    </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                    <Link className='w-full' href='/user/orders'>
+                        Order History
+                    </Link>
+                </DropdownMenuItem>
+                {
+                    session?.user?.role === 'admin' && (
+                        <DropdownMenuItem>
+                            <Link className='w-full' href='/admin/dashboard'>
+                                Admin
+                            </Link>
+                        </DropdownMenuItem>
+                    )
+                }
                 <DropdownMenuItem className="p-0 mb-1">
                     <form action={signOutAction} className="w-full">
                         <Button className="w-full py-4 px-2 h-4 justify-start" variant='ghost'>
