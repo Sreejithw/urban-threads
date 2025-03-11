@@ -104,7 +104,7 @@ const Promotions = () => {
       </div>
       <div className='relative w-full'>
         <Image
-          src='/images/promo.jpg'
+          src='/images/promo.png' 
           alt='promotion'
           fill
           className='object-cover'
