@@ -9,7 +9,8 @@ export default function RootLayout({
   return (
     <div className="flex flex-col">
       <Header />
-      <main className="min-h-screen bg-black text-white">
+      <main className="min-h-screen bg-black text-white bg-[url('/images/bgShipping.jpg')] bg-cover bg-center">
+        {/* <div className="absolute inset-0 bg-black/40 h-full w-full"></div> */}
         { children }
       </main>
       <Footer />

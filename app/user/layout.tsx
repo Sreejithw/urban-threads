@@ -16,7 +16,7 @@ export default function UserLayout({
           <div className='flex h-16 items-center px-4'>
             <Link href='/' className='w-22'>
               <Image
-                src='/images/favicon.png'
+                src='/images/uTLogo.png'
                 width={40}
                 height={40}
                 alt={`${COMPANY_NAME} logo`}

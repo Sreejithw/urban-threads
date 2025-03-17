@@ -42,7 +42,6 @@ const ProductForm = ({
     const onSubmit: SubmitHandler<z.infer<typeof addProductSchema>> = async (
         values
       ) => {
-        console.log('COming')
         if (type === 'Create') {
           const res = await createProduct(values);
       

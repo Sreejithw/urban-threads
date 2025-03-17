@@ -83,7 +83,7 @@ const Promotions = () => {
         {/* Border container */}
         <div className='absolute inset-8 border-2 border-white'></div>
         
-        <div className='grid grid-cols-4 gap-4 border-b border-white/20 pb-6'>
+        <div className='grid grid-cols-4 gap-4 border-b border-white/20 pb-6 w-[75%] self-center'>
           <StatBox label='DAYS' value={time.days} />
           <StatBox label='HOURS' value={time.hours} />
           <StatBox label='MINUTES' value={time.minutes} />
@@ -91,12 +91,12 @@ const Promotions = () => {
         </div>
         
         <div className='text-center space-y-4'>
-          <h3 className='text-4xl font-bold tracking-widest'>WEEKEND</h3>
+          <h3 className='text-4xl sm:text-4xl xs:text-3xl font-bold tracking-widest'>WEEKEND</h3>
           <div className='space-y-2'>
-            <p className='text-5xl font-bold tracking-[0.3em] text-outline'>FLASH</p>
-            <p className='text-5xl font-bold tracking-[0.3em] text-outline'>SALE</p>
+            <p className='text-5xl sm:text-4xl xs:text-4xl font-bold tracking-[0.3em] text-outline'>FLASH</p>
+            <p className='text-5xl sm:text-4xl xs:text-4xl font-bold tracking-[0.3em] text-outline'>SALE</p>
           </div>
-          <p className='text-lg'>ENDS {TARGET_DATE.toLocaleDateString()}</p>
+          <p className='text-lg sm:text-base xs:text-sm'>ENDS {TARGET_DATE.toLocaleDateString()}</p>
           <Button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-md relative z-10" asChild>
             <Link href='/search'>Shop Now</Link>
           </Button>
@@ -117,8 +117,8 @@ const Promotions = () => {
 
 const StatBox = ({ label, value }: { label: string; value: number }) => (
   <div className='text-center'>
-    <p className='text-4xl font-bold'>{value.toString().padStart(2, '0')}</p>
-    <p className='text-sm tracking-wider'>{label}</p>
+    <p className='text-2xl md:text-4xl font-bold'>{value.toString().padStart(2, '0')}</p>
+    <p className='text-[0.5rem] xs:text-[0.5rem] sm:text-xs md:text-sm tracking-wider'>{label}</p>
   </div>
 );
 

@@ -100,7 +100,7 @@ const RegisterForm = () => {
                     <div className="text-center text-destructive">{data.message}</div>
                 )
             }
-            <div className="text-sm text-center text-muted-foreground">
+            <div className="text-sm text-center">
                 Already have an account?{' '}
                 <Link href='/login' target="_self" className="link">
                     Log in

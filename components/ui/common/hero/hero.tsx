@@ -34,14 +34,15 @@ const Hero = () => {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 flex flex-col justify-center items-center pt-32 px-6 md:items-start md:pl-16 lg:pl-24">
-        <h1 ref={titleRef} className="text-white text-7xl md:text-9xl font-bold tracking-tighter">
-          Urban<span className="text-[#c5ff00]">Threads</span>
-          <span ref={yearRef} className="text-[#c5ff00] text-3xl md:text-4xl align-top ml-2">©2025</span>
+      <div className="relative z-10 flex flex-col justify-center pt-32 px-6 md:pl-16 lg:pl-24">
+        <h1 ref={titleRef} className="text-white text-4xl md:text-7xl font-bold tracking-tighter">
+          <span className="block xs:block sm:block md:inline">Urban</span>
+          <span className="text-[#c5ff00] block xs:block sm:block md:inline">Threads</span>
+          <span ref={yearRef} className="text-[#c5ff00] text-xl sm:text-2xl md:text-3xl md:text-4xl align-top ml-2">©2025</span>
         </h1>
         
         <div ref={taglineRef} className="mt-auto pt-64 md:pt-72">
-          <h2 className="text-[#c5ff00] text-5xl md:text-7xl font-bold leading-tight tracking-tight max-w-xl">
+          <h2 className="text-[#c5ff00] text-4xl md:text-7xl font-bold leading-tight tracking-tight max-w-xl">
             ALWAYS<br />
             ON YOUR<br />
             JOURNEY.

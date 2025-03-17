@@ -47,7 +47,7 @@ const PaymentForm = ({paymentMethod} : { paymentMethod: string | null }) => {
 
     return (
         <>
-            <div className='max-w-md mx-auto'>
+            <div className='max-w-md mx-auto relative z-10'>
                 <Form {...form}>
                     <form
                         method='post'
@@ -55,7 +55,7 @@ const PaymentForm = ({paymentMethod} : { paymentMethod: string | null }) => {
                         className='space-y-4'
                     >
                         <h1 className='h2-bold mt-4'>Payment Method</h1>
-                        <p className='text-sm text-muted-foreground'>
+                        <p className='text-sm'>
                             Please select your preferred payment method
                         </p>
                         <div className='flex flex-col gap-5 md:flex-row'>

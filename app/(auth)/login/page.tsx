@@ -26,10 +26,17 @@ const LoginPage = async (props: {
     }
     
     return <div className="w-full max-w-md mx-auto">
-        <Card>
+        <Card className="bg-transparent backdrop-blur-sm border border-white">
             <CardHeader className="space-y-4">
                 <Link href='/' className="flex-center">
-                    <Image src='/images/favicon.png' width={100} height={100} alt={`${COMPANY_NAME} logo`} priority={true}/>
+                    <Image 
+                        src='/images/uTLogo.png'
+                        className="rounded-full"
+                        width={100} 
+                        height={100} 
+                        alt={`${COMPANY_NAME} logo`} 
+                        priority={true}
+                    />
                 </Link>
                 <CardTitle className="text-center">Sign In</CardTitle>
                 <CardDescription className="text-center">

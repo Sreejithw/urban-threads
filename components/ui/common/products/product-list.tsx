@@ -15,7 +15,7 @@ const ProductList = ({ data, title, maxShowValue} : { data: Product[], title?: s
         <section 
             id="collection"
             ref={sectionRef} 
-            className="min-h-screen py-24 px-6 md:px-16"
+            className="min-h-10 py-24 px-6 md:px-16"
         >
             <h2 ref={titleRef} className="text-white text-4xl md:text-6xl font-bold mb-10 text-center">{title}</h2>
             { displayData.length > 0 ? (

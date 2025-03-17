@@ -78,7 +78,7 @@ const SearchPage = async (props: {
     const categories = await getAllCategoriesAction();
   
     return (
-        <div className='grid md:grid-cols-5 md:gap-5 mb-4'>
+        <div className='grid md:grid-cols-5 md:gap-5 mb-4 relative z-10'>
           {showFilters === 'true' && (
             <div className='filter-links mt-12 ml-12'>
               {/* Category Links */}

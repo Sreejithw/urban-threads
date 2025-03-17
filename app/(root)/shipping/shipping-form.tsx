@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Loader } from 'lucide-react';
+import { ChevronRight, Loader } from 'lucide-react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { ShippingAddress } from '@/types';
 import { useRouter } from 'next/navigation';
@@ -49,9 +49,9 @@ const ShippingForm = ({ address }: { address: ShippingAddress | null; }) => {
     }
 
     return <>
-        <div className='max-w-md mx-auto space-y-4'>
+        <div className='max-w-md mx-auto space-y-4 px-4 relative z-10 border border-white rounded-lg p-6'>
             <h1 className='h2-bold mt-4'>Shipping Address</h1>
-            <p className='text-sm text-muted-foreground'>
+            <p className='text-sm'>
                 Please enter shipping address
             </p>
             <Form {...form}>
@@ -167,13 +167,13 @@ const ShippingForm = ({ address }: { address: ShippingAddress | null; }) => {
                         />
                     </div>
                     <div className='flex gap-2'>
-                        <Button type='submit' disabled={isPending}>
+                        <Button type='submit' disabled={isPending} className='rounded-none w-full mt-2'>
+                            Continue
                             {isPending ? (
                                 <Loader className='animate-spin w-4 h-4' />
                             ) : (
-                                <ArrowRight className='w-4 h-4' />
+                                <ChevronRight className='w-4 h-4' />
                             )}
-                            Continue
                         </Button>
                     </div>
                 </form>

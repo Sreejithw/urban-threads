@@ -67,7 +67,7 @@ const LoginForm = () => {
                     <div className="text-center text-destructive">{data.message}</div>
                 )
             }
-            <div className="text-sm text-center text-muted-foreground">
+            <div className="text-sm text-center">
                 Don&apos;t have an account?{' '}
                 <Link href='/register' target="_self" className="link">
                     Sign Up

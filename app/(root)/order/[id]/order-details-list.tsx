@@ -105,8 +105,8 @@ const OrderDetailsList = ({ order, paypalClientId, stripeClientSecretKey, isAdmi
     
     return (
         <>
-            <h1 className='py-4 pl-[10rem] text-2xl'> Order {maskDynamicId(order.id)}</h1>
-            <div className='grid md:grid-cols-3 md:gap-5 pr-[10rem] pl-[10rem] pb-[5rem]'>
+            <h1 className='py-4 ml-8 mt-2 text-2xl relative z-10'> Order {maskDynamicId(order.id)}</h1>
+            <div className='grid md:grid-cols-3 md:gap-5 m-8 relative z-10'>
                 <div className='overflow-x-auto md:col-span-2 space-y-4'>
                 <Card>
                     <CardContent className='p-4 gap-4'>
@@ -193,6 +193,7 @@ const OrderDetailsList = ({ order, paypalClientId, stripeClientSecretKey, isAdmi
                         <div>Shipping</div>
                         <div>{formatCurrency(shippingPrice)}</div>
                     </div>
+                    <hr />
                     <div className='flex justify-between'>
                         <div>Total</div>
                         <div>{formatCurrency(grandTotal)}</div>
